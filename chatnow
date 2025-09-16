@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex">
+    <script>
+      // Forward any tracking parameters (like gclid or utm) from Ads
+      const params = window.location.search || '';
+      
+      // WhatsApp target link with predefined message
+      const waLink = "https://wa.me/917977215553?text=Hi,%20I%20am%20interested" + params;
+      
+      // Redirect the top window (works even inside iframe)
+      try { 
+        window.top.location.href = waLink; 
+      } catch(e) { 
+        window.location.href = waLink; 
+      }
+    </script>
+  </head>
+  <body>
+    Redirecting you to WhatsApp… <br>
+    If nothing happens, <a href="https://wa.me/917977215553?text=Hi,%20I%20am%20interested">click here</a>.
+  </body>
+</html>
